@@ -1,0 +1,184 @@
+[
+  {
+    "id": 1,
+    "title": "Complete MERN Stack Development",
+    "instructor": "Om Jaiswal",
+    "price": 499,
+    "duration": "45 Hours",
+    "level": "Beginner",
+    "image": "https://picsum.photos/300/200?1"
+  },
+  {
+    "id": 2,
+    "title": "React.js From Scratch",
+    "instructor": "Rahul Sharma",
+    "price": 599,
+    "duration": "30 Hours",
+    "level": "Beginner",
+    "image": "https://picsum.photos/300/200?2"
+  },
+  {
+    "id": 3,
+    "title": "Node.js & Express.js",
+    "instructor": "John Doe",
+    "price": 699,
+    "duration": "28 Hours",
+    "level": "Intermediate",
+    "image": "https://picsum.photos/300/200?3"
+  },
+  {
+    "id": 4,
+    "title": "MongoDB Masterclass",
+    "instructor": "Ankit Verma",
+    "price": 549,
+    "duration": "22 Hours",
+    "level": "Intermediate",
+    "image": "https://picsum.photos/300/200?4"
+  },
+  {
+    "id": 5,
+    "title": "JavaScript Interview Preparation",
+    "instructor": "Priya Singh",
+    "price": 799,
+    "duration": "35 Hours",
+    "level": "Advanced",
+    "image": "https://picsum.photos/300/200?5"
+  },
+  {
+    "id": 6,
+    "title": "Data Structures & Algorithms",
+    "instructor": "Aman Gupta",
+    "price": 999,
+    "duration": "60 Hours",
+    "level": "Intermediate",
+    "image": "https://picsum.photos/300/200?6"
+  },
+  {
+    "id": 7,
+    "title": "Python Programming Bootcamp",
+    "instructor": "Neha Kapoor",
+    "price": 649,
+    "duration": "40 Hours",
+    "level": "Beginner",
+    "image": "https://picsum.photos/300/200?7"
+  },
+  {
+    "id": 8,
+    "title": "Java Programming Masterclass",
+    "instructor": "Rohit Sharma",
+    "price": 749,
+    "duration": "42 Hours",
+    "level": "Intermediate",
+    "image": "https://picsum.photos/300/200?8"
+  },
+  {
+    "id": 9,
+    "title": "HTML & CSS Complete Guide",
+    "instructor": "Simran Kaur",
+    "price": 399,
+    "duration": "18 Hours",
+    "level": "Beginner",
+    "image": "https://picsum.photos/300/200?9"
+  },
+  {
+    "id": 10,
+    "title": "TypeScript for React Developers",
+    "instructor": "Aditya Mehta",
+    "price": 699,
+    "duration": "26 Hours",
+    "level": "Intermediate",
+    "image": "https://picsum.photos/300/200?10"
+  },
+  {
+    "id": 11,
+    "title": "Next.js Full Course",
+    "instructor": "Karan Malhotra",
+    "price": 899,
+    "duration": "36 Hours",
+    "level": "Advanced",
+    "image": "https://picsum.photos/300/200?11"
+  },
+  {
+    "id": 12,
+    "title": "Git & GitHub Essentials",
+    "instructor": "Sneha Patil",
+    "price": 299,
+    "duration": "12 Hours",
+    "level": "Beginner",
+    "image": "https://picsum.photos/300/200?12"
+  },
+  {
+    "id": 101,
+    "title": "Complete React & Node.js Bootcamp",
+    "description": "Learn React, Node.js, Express, MongoDB, JWT Authentication, and build full-stack web applications from scratch.",
+    "instructor": "Udit Goyal",
+    "price": 999,
+    "discountPrice": 499,
+    "duration": "40 Hours",
+    "level": "Beginner",
+    "language": "English",
+    "category": "Web Development",
+    "rating": 4.8,
+    "studentsEnrolled": 2543,
+    "lessons": 68,
+    "certificate": true,
+    "thumbnail": "https://picsum.photos/640/360",
+    "previewVideo": "https://samplelib.com/lib/preview/mp4/sample-5s.mp4",
+    "tags": [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "JavaScript"
+    ],
+    "requirements": [
+      "Basic HTML & CSS",
+      "Basic JavaScript",
+      "Computer with Internet Connection"
+    ],
+    "whatYouWillLearn": [
+      "Build Full Stack Applications",
+      "Create REST APIs",
+      "Implement JWT Authentication",
+      "Deploy MERN Applications"
+    ],
+    "createdAt": "2026-07-18T10:00:00Z",
+    "updatedAt": "2026-07-18T10:00:00Z"
+  },
+  {
+    "id": 102,
+    "title": "Complete React & Node.js Bootcamp",
+    "description": "learn pythton ",
+    "instructor": "Ishu Goyal",
+    "price": 999,
+    "discountPrice": 499,
+    "duration": "40 Hours",
+    "level": "Beginner",
+    "language": "English",
+    "category": "Web Development",
+    "rating": 4.8,
+    "studentsEnrolled": 2543,
+    "lessons": 68,
+    "certificate": true,
+    "thumbnail": "https://picsum.photos/640/360",
+    "previewVideo": "https://samplelib.com/lib/preview/mp4/sample-5s.mp4"
+  },
+  {
+    "id": 1784542983519,
+    "title": "Complete React & Node.js Bootcamp",
+    "description": "learn pythton ",
+    "instructor": "Ishu Goyal",
+    "price": 999,
+    "discountPrice": 499,
+    "duration": "40 Hours",
+    "level": "Beginner",
+    "language": "English",
+    "category": "Web Development",
+    "rating": 4.8,
+    "studentsEnrolled": 2543,
+    "lessons": 68,
+    "certificate": true,
+    "thumbnail": "https://picsum.photos/640/360",
+    "previewVideo": "https://samplelib.com/lib/preview/mp4/sample-5s.mp4"
+  }
+]
