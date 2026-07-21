@@ -1,19 +1,13 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import './App.css';
+import Hero from './components/Hero';
 
 function App() {
   return (
     <div className="App">
       <Navbar />
       <main>
-        {/* Placeholder sections */}
-        <section id="home" className="section" style={{ height: '100vh', display: 'flex', alignItems: 'center' }}>
-          <div className="container">
-            <h1 className="animate-fade-in">Hi, I'm Udit</h1>
-            <p className="animate-fade-in" style={{ animationDelay: '0.2s', marginTop: '1rem', color: 'var(--text-secondary)' }}>Welcome to my portfolio</p>
-          </div>
-        </section>
+        <Hero />
         <section id="skills" className="section" style={{ minHeight: '50vh' }}>
           <div className="container">
             <h2 className="section-title">Skills</h2>
