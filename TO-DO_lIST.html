@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo List</title>
+    <!-- <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .todo-container {
+            background: #fff;
+            padding: 20px;
+            width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+
+        li {
+            background: #eee;
+            padding: 8px;
+            margin-bottom: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 4px;
+        }
+
+        li.done {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        .delete {
+            color: red;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style> -->
+</head>
+<body>
+
+<div class="todo-container">
+    <h2>Todo List</h2>
+    <input type="text" id="taskInput" placeholder="Enter task">
+    <button id="addBtn">Add Task</button>
+
+    <ul id="taskList"></ul>
+</div>
+
+<script>
+    let input = document.getElementById("taskInput");
+    let addBtn = document.getElementById("addBtn");
+    let taskList = document.getElementById("taskList");
+
+    addBtn.addEventListener("click", () => {
+        if (input.value === "") return;
+        let li = document.createElement("li"); //create a list element
+        li.innerText = input.value;
+
+        li.addEventListener("click", () => {
+            li.classList.toggle("done");
+        });
+
+        let del = document.createElement("span");
+        del.innerText = "delete";
+        del.className = "delete";
+        del.addEventListener("click", () => {
+            li.remove();
+        });
+        
+        let edit= document.createElement("span");
+        edit.innerText= "edit"
+        edit.className="edit";
+        edit.addEventListener("click",()=>{
+            input.value.innerText= prompt("enter a value")
+        })
+
+        li.appendChild(del);
+        li.appendChild(edit);
+
+        taskList.appendChild(li);
+        taskList.appendChild(edit);
+
+        input.value = "";
+    });
+</script>
+
+</body>
+</html>
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .todo-container {
+            background: #fff;
+            padding: 20px;
+            width: 320px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+
+        li {
+            background: #eee;
+            padding: 8px;
+            margin-bottom: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 4px;
+        }
+
+        li.done {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        .actions span {
+            margin-left: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .edit {
+            color: green;
+        }
+
+        .delete {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="todo-container">
+    <h2>Todo List</h2>
+    <input type="text" id="taskInput" placeholder="Enter task">
+    <button id="addBtn">Add Task</button>
+
+    <ul id="taskList"></ul>
+</div>
+
+<script>
+    let input = document.getElementById("taskInput");
+    let addBtn = document.getElementById("addBtn");
+    let taskList = document.getElementById("taskList");
+
+    addBtn.addEventListener("click", () => {
+        if (input.value === "") return;
+
+        let li = document.createElement("li");
+        let textSpan = document.createElement("span");
+        textSpan.innerText = input.value;
+
+        textSpan.addEventListener("click", () => {
+            li.classList.toggle("done");
+        });
+
+        let actions = document.createElement("div");
+        actions.className = "actions";
+
+        let edit = document.createElement("span");
+        edit.innerText = "✎";
+        edit.className = "edit";
+
+        edit.addEventListener("click", () => {
+            let newText = prompt("Edit task:", textSpan.innerText);
+            if (newText !== null && newText.trim() !== "") {
+                textSpan.innerText = newText;
+            }
+        });
+
+        let del = document.createElement("span");
+        del.innerText = "✖";
+        del.className = "delete";
+
+        del.addEventListener("click", () => {
+            li.remove();
+        });
+
+        actions.appendChild(edit);
+        actions.appendChild(del);
+
+        li.appendChild(textSpan);
+        li.appendChild(actions);
+
+        taskList.appendChild(li);
+        input.value = "";
+    });
+</script>
+
+</body>
+</html> -->
