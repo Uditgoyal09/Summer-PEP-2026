@@ -1,0 +1,76 @@
+.cert-achieve-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  margin-top: 3rem;
+}
+
+.title-icon {
+  margin-right: 0.5rem;
+  color: var(--accent);
+  vertical-align: middle;
+}
+
+.cert-list,
+.achieve-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.cert-card,
+.achieve-card {
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+  border-left: 3px solid var(--accent);
+}
+
+.cert-card:hover,
+.achieve-card:hover {
+  transform: translateX(10px);
+  background: rgba(30, 41, 59, 0.9);
+}
+
+.cert-header,
+.achieve-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.cert-title,
+.achieve-title {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  font-weight: 600;
+  max-width: 75%;
+}
+
+.cert-date,
+.achieve-date {
+  font-size: 0.85rem;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.cert-issuer,
+.achieve-platform {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.achieve-description {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+  .cert-achieve-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+}
