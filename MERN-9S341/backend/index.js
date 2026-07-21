@@ -6,6 +6,7 @@ import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import { fileURLToPath } from 'url';
 import authRoutes from './routes/auth.route.js';
+import coursesRoutes from './routes/courses.routes.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -19,6 +20,7 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 
 app.use('/api', authRoutes);
+app.use('/api/courses', coursesRoutes);
 
 const dataDir = path.join(__dirname, 'data');
 const usersFilePath = path.join(dataDir, 'users.json');
@@ -52,38 +54,6 @@ const coursesFilePath = path.join(dataDir, 'courses.json');
 // });
 
 
-
-app.get('/api/courses', async (req, res) => {
-  try {
-    const data = await fs.readFile(coursesFilePath, 'utf-8');
-    const courses = data ? JSON.parse(data) : [];  //store or convert JSON into js Object to manuplate
-    res.status(200).json(courses);
-  } catch (error) {
-    console.error(`Error reading ${coursesFilePath}:`, error.message);
-    res.status(500).json({ message: 'Internal server error' });
-  }
-});
-
-
-app.post('/api/courses', async (req, res) => {
-  try {
-    const data = await fs.readFile(coursesFilePath, 'utf-8');
-    const courses = data ? JSON.parse(data) : [];
-    
-    const newCourse = {id: Date.now(),  ...req.body };
-    
-    courses.push(newCourse);
-    await fs.writeFile(coursesFilePath, JSON.stringify(courses, null, 2), 'utf-8');
-    
-    res.status(201).json({
-      message: 'Course created successfully',
-      course: newCourse
-    });
-  } catch (error) {
-    console.error(`Error in /api/courses POST:`, error.message);
-    res.status(500).json({ message: 'Internal server error' });
-  }
-});
 
 // Start the server
 app.listen(PORT, () => {
