@@ -1,9 +1,13 @@
-const express = require('express');
-const fs = require('fs').promises;
-const path = require('path');
-const dotenv = require('dotenv');
-const bcrypt = require('bcrypt');
-const jwt= require('jsonwebtoken')  
+import express from 'express';
+import fs from 'fs/promises';
+import path from 'path';
+import dotenv from 'dotenv';
+import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 dotenv.config();
 
