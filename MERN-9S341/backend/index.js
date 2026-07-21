@@ -24,32 +24,32 @@ const dataDir = path.join(__dirname, 'data');
 const usersFilePath = path.join(dataDir, 'users.json');
 const coursesFilePath = path.join(dataDir, 'courses.json');
 
-app.get('/api/users', async (req, res) => {
-  try {
-    const data = await fs.readFile(usersFilePath, 'utf-8');
-    const users = data ? JSON.parse(data) : [];
-    res.status(200).json(users);
-  } catch (error) {
-    console.error(`Error reading ${usersFilePath}:`, error.message);
-    res.status(500).json({ message: 'Internal server error' });
-  }
-});
+// app.get('/api/users', async (req, res) => {
+//   try {
+//     const data = await fs.readFile(usersFilePath, 'utf-8');
+//     const users = data ? JSON.parse(data) : [];
+//     res.status(200).json(users);
+//   } catch (error) {
+//     console.error(`Error reading ${usersFilePath}:`, error.message);
+//     res.status(500).json({ message: 'Internal server error' });
+//   }
+// });
 
-app.post('/api/users', async (req, res) => {
-  try {
-    const data = await fs.readFile(usersFilePath, 'utf-8');
-    const users = data ? JSON.parse(data) : [];
+// app.post('/api/users', async (req, res) => {
+//   try {
+//     const data = await fs.readFile(usersFilePath, 'utf-8');
+//     const users = data ? JSON.parse(data) : [];
     
-    const newUser = { id: Date.now(),  ...req.body  };
-    users.push(newUser);
-    await fs.writeFile(usersFilePath, JSON.stringify(users, null, 2), 'utf-8');
-    res.status(201).json({message: 'User created successfully',user: newUser });
+//     const newUser = { id: Date.now(),  ...req.body  };
+//     users.push(newUser);
+//     await fs.writeFile(usersFilePath, JSON.stringify(users, null, 2), 'utf-8');
+//     res.status(201).json({message: 'User created successfully',user: newUser });
 
-  } catch (error) {
-    console.error(`Error in /api/users POST:`, error.message);
-    res.status(500).json({ message: 'Internal server error' });
-  }
-});
+//   } catch (error) {
+//     console.error(`Error in /api/users POST:`, error.message);
+//     res.status(500).json({ message: 'Internal server error' });
+//   }
+// });
 
 
 
