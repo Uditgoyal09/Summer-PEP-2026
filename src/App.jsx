@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import SkillsEducation from './components/SkillsEducation';
 
 function App() {
   return (
@@ -8,11 +9,7 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <section id="skills" className="section" style={{ minHeight: '50vh' }}>
-          <div className="container">
-            <h2 className="section-title">Skills</h2>
-          </div>
-        </section>
+        <SkillsEducation />
         <section id="experience" className="section" style={{ minHeight: '50vh' }}>
           <div className="container">
             <h2 className="section-title">Experience</h2>
