@@ -1,15 +1,7 @@
 import express from 'express';
-import fs from 'fs/promises';
-import path from 'path';
 import dotenv from 'dotenv';
-import bcrypt from 'bcrypt';
-import jwt from 'jsonwebtoken';
-import { fileURLToPath } from 'url';
 import authRoutes from './routes/auth.route.js';
-import coursesRoutes from './routes/courses.routes.js';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+import coursesRoutes from './routes/course.route.js';
 
 dotenv.config();
 
@@ -21,10 +13,6 @@ app.use(express.json());
 
 app.use('/api', authRoutes);
 app.use('/api/courses', coursesRoutes);
-
-const dataDir = path.join(__dirname, 'data');
-const usersFilePath = path.join(dataDir, 'users.json');
-const coursesFilePath = path.join(dataDir, 'courses.json');
 
 // app.get('/api/users', async (req, res) => {
 //   try {
