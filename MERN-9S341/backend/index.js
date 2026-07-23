@@ -29,7 +29,7 @@ app.use('/api/courses', coursesRoutes);
 //   try {
 //     const data = await fs.readFile(usersFilePath, 'utf-8');
 //     const users = data ? JSON.parse(data) : [];
-    
+
 //     const newUser = { id: Date.now(),  ...req.body  };
 //     users.push(newUser);
 //     await fs.writeFile(usersFilePath, JSON.stringify(users, null, 2), 'utf-8');
